@@ -1,84 +1,49 @@
 @extends('layouts.app')
 
+@push('scripts')
+    <script src="{{ asset('js/registerUser.js') }}"></script>
+@endpush
+
 @section('content')
-    <div class="container">
-        <div class="row pt-30">
+    <div class="container d-flex justify-content-center">
+        <div class="row pt-default-header w-100">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="card-auth">
+                    <form class="form-horizontal " method="POST" action="{{ route('register') }}">
+                        <h1 class="text-center mt-3 mb-5">{{ __('auth/register.join_the_change') }}</h1>
 
-            <div class="col-md-6">
-                <img src="{{ asset('storage/home2.png') }}" class="img-fluid" alt="">
+                        @component('shared.new-user-form-fields', ['centers' => $centers])
+                        @endcomponent
 
-            </div>
-            <div class="col-md-6">
-
-                <div class="cus-card">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
-
-                        <h1 class="text-center">Sign up</h1>
-
-                        <div class="form-group{{ $errors->has('NOMBRE') ? ' has-error' : '' }}">
-                            <label for="NOMBRE" class=" control-label">Name</label>
-
-                            <div class="">
-                                <input id="NOMBRE" type="text" class="form-control" name="NOMBRE"
-                                       value="{{ old('NOMBRE') }}" required autofocus>
-
-                                @if ($errors->has('NOMBRE'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('NOMBRE') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required
+                                   checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                {{ __('auth/register.terms') }}
+                            </label>
                         </div>
 
-                        <div class="form-group{{ $errors->has('EMAIL') ? ' has-error' : '' }}">
-                            <label for="EMAIL" class=" control-label">E-Mail Address</label>
-
-                            <div class="">
-                                <input id="EMAIL" type="email" class="form-control" name="EMAIL"
-                                       value="{{ old('EMAIL') }}" required>
-
-                                @if ($errors->has('EMAIL'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('EMAIL') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('PASSWORD') ? ' has-error' : '' }}">
-                            <label for="PASSWORD" class=" control-label">Password</label>
-
-                            <div class="">
-                                <input id="PASSWORD" type="password" class="form-control" name="PASSWORD" required>
-
-                                @if ($errors->has('PASSWORD'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('PASSWORD') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="PASSWORD-confirm" class="control-label">Confirm Password</label>
-
-                            <div class="">
-                                <input id="PASSWORD-confirm" type="password" class="form-control"
-                                       name="PASSWORD_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
+                        <div class="form-group mt-3">
                             <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
+                                <button type="submit" class="btn-default p-2">
+                                    {{ __('auth/register.register') }}
                                 </button>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <span>
+                                {{ __('auth/register.already_account') }} <a
+                                        href="{{ route('login') }}">{{ __('auth/register.login') }}</a>
+                            </span>
+                        </div>
+
+                        @csrf
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
+
 @endsection

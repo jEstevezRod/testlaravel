@@ -1,6 +1,3 @@
-
-window._ = require('lodash');
-
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -38,16 +35,10 @@ if (token) {
 }
 
 /**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
+ * Load Faker.js library to make easier to tester autogenerate all the form fields
+ * from register form.
+ * @type {Faker}
  */
 
-// import Echo from 'laravel-echo'
-
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
+let faker = window.faker = require('faker');
+faker.locale = "es";

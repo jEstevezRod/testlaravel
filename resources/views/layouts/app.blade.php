@@ -12,15 +12,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous"/>
 </head>
 <body>
 
-<div id="app" class="min-h-100 main-bg d-flex flex-column">
+<div id="app" class="min-h-100 app-home d-flex flex-column">
 
     @include('shared.navbar')
 
-    <div class="container d-flex flex-fill">
-            @yield('content')
+    <div class="container-fluid d-flex flex-fill">
+        @yield('content')
     </div>
 
     @include('shared.footer')
@@ -29,5 +32,7 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+@stack('scripts')
+
 </body>
 </html>

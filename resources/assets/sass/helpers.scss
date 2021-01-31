@@ -1,0 +1,78 @@
+/**********
+ * Spacing *
+ **********/
+.min-h-100 {
+  min-height: 100vh;
+}
+
+.pt-default-header {
+  padding-top: 5rem;
+}
+
+/***********
+ * Typography *
+ **********/
+
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.decoration-none:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**********
+ * Cursor  *
+ **********/
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/**********
+ * Color  *
+ **********/
+
+.main-color {
+  color: $color-main-yellow;
+}
+.secondary-color {
+  color: $color-main-blue
+}
+
+/**********
+ * Breakpoints *
+ **********/
+
+@media (min-width: 768px) {
+  .pt-default-header {
+    padding-top: 10rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .pt-default-header {
+    padding-top: 7rem;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .pt-default-header {
+    padding-top: 8rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}

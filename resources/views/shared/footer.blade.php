@@ -1,3 +1,3 @@
 <footer class="footer">
-        <span class="text-white text-center">© 2021 - developed and designed by Jesus Estevez</span>
+        <span class="text-center">© @php echo date("Y"); @endphp - developed and designed by Jesús Estévez</span>
 </footer>
