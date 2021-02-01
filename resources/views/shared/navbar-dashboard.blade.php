@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="nav-item mx-3 dropdown d-flex align-items-center">
-                        <a href="#" class="dropdown-toggle  decoration-none font-weight-bold"
+                        <a href="#" class="dropdown-toggle  decoration-none font-weight-bold name-info"
                            data-toggle="dropdown" role="button" aria-expanded="false">
                             Hola, {{ Auth::user()->NOMBRE }} <span class="caret"></span>
                         </a>

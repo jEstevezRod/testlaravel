@@ -51,4 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
         autogenerateHint.classList.remove('d-none')
     }
 
+    // Open modal for validation
+
+    let errors = document.querySelector('input[name=validationErrors]');
+
+    if (errors.value) {
+        let modalAddUser = document.getElementById('modalAddUser');
+
+        if (modalAddUser) {
+            $(modalAddUser).modal({show: true});
+        }
+    }
+
+
 })

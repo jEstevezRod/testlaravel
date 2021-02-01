@@ -33,6 +33,8 @@
         </div>
     </div>
 
+    <input type="hidden" name="validationErrors" value="{{session()->has('errors')}}">
+
     @component('components.modal-add', [ 'centers' => $centers])
     @endcomponent
 
