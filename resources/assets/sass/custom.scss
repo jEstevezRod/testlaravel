@@ -176,6 +176,13 @@
   max-width: 700px;
 }
 
+@media (max-width: 768px) {
+  .card-auth {
+    padding: 30px 15px;
+  }
+
+}
+
 
 /***************
  * Table element *
