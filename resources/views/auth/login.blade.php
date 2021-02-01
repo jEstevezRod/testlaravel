@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container d-flex justify-content-center">
         <div class="row pt-default-header w-100">
             <div class="col d-flex justify-content-center align-items-center">
                 <div class="card-auth">
