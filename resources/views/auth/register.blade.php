@@ -25,7 +25,7 @@
 
                         <div class="form-group mt-3">
                             <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn-default p-2">
+                                <button type="submit" class="btn-default">
                                     {{ __('auth/register.register') }}
                                 </button>
                             </div>

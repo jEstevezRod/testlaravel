@@ -13,7 +13,7 @@
                 <p>{{ __('components/modal-delete.text1') }}</p>
                 <strong id="userName-text"></strong>
                 <div id="deleteYourself" class="alert alert-danger-custom my-3 d-none">
-                    {{ __('components/modal-delete.warning') }}
+                    {!! __('components/modal-delete.warning') !!}
                 </div>
             </div>
             <div class="modal-footer">

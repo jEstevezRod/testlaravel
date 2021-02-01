@@ -47,7 +47,7 @@
 
                         <div class="form-group">
                             <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn-default px-3 py-2">
+                                <button type="submit" class="btn-default">
                                     {{ __('auth/login.login') }}
                                 </button>
                             </div>
