@@ -26,7 +26,7 @@
         </div>
         <div class="row pt-default-header">
             <div class="col d-flex flex-column">
-                <p class="text-center banner-title text-white">{!! __('home.features_title') !!}</p>
+                <h2 class="text-center text-white">{!! __('home.features_title') !!}</h2>
                 <p class="text-center text-white h5 mt-4">
                     {!! __('home.features_text') !!}
                 </p>
